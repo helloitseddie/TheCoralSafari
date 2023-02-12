@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EAQ-sD-OY4">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--The Coral Safari-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-X7-gBC">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <gestureRecognizers/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
@@ -35,6 +35,7 @@
                             <constraint firstItem="FYh-X7-gBC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pdT-lB-Zv3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="The Coral Safari" id="v9q-d1-v4Q"/>
                     <connections>
                         <outlet property="map" destination="FYh-X7-gBC" id="9yS-Kb-MTg"/>
                     </connections>
@@ -46,10 +47,84 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-22" y="5"/>
+            <point key="canvasLocation" x="6464.8854961832058" y="4.9295774647887329"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="aXM-Gd-IPw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFs-aq-0kC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="fish" catalog="system" id="2tZ-Dy-4p3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fCt-fX-KmJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IeA-rS-eMl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXZ-Od-VCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5538.1679389312976" y="4.9295774647887329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yGb-jG-VlW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EAQ-sD-OY4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E8g-WP-Wlx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pFs-aq-0kC" kind="relationship" relationship="viewControllers" id="Uhl-Nu-UfX"/>
+                        <segue destination="ypt-Zr-nlD" kind="relationship" relationship="viewControllers" id="Cye-fS-G6t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXO-k4-thX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4611.4503816793895" y="4.9295774647887329"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="lkG-9d-F7s">
+            <objects>
+                <viewController id="C4V-nW-JjU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EpT-uB-rRV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qRY-1O-u60"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAQ" id="4A5-Ge-Fk0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hC-A9-Qt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6465" y="725"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="8cz-xX-nt6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ypt-Zr-nlD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="FAQ" image="questionmark.diamond" catalog="system" id="nmW-uv-AsI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k9B-bf-IDh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C4V-nW-JjU" kind="relationship" relationship="rootViewController" id="0FS-WT-Pbe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hje-dq-Loa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5538" y="725"/>
         </scene>
     </scenes>
     <resources>
+        <image name="fish" catalog="system" width="128" height="100"/>
+        <image name="questionmark.diamond" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
