@@ -21,8 +21,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // manages getting location of the device
     let locationManager = CLLocationManager()
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.searchController = searchController
+        
+        view.backgroundColor = .white
     
     }
     
