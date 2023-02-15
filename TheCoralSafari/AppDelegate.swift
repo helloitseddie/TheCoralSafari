@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let viewController = ViewController()
+        
+        let navController = UINavigationController(rootViewController: viewController)
+        viewController.navigationItem.title = "The Coral Safari"
+        navController.tabBarItem.title = "Search"
+        
+        let tabController = UITabBarController()
+        tabController.viewControllers = [navController]
         return true
     }
 
