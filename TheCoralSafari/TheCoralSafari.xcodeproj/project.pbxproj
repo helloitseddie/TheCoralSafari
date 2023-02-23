@@ -13,6 +13,7 @@
 		276B607F2991CFD7007E5458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276B607D2991CFD7007E5458 /* Main.storyboard */; };
 		276B60812991CFDA007E5458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276B60802991CFDA007E5458 /* Assets.xcassets */; };
 		276B60842991CFDA007E5458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276B60822991CFDA007E5458 /* LaunchScreen.storyboard */; };
+		AD04577029A54B460056E836 /* coordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04576F29A54B460056E836 /* coordinateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		276B60802991CFDA007E5458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276B60832991CFDA007E5458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276B60852991CFDA007E5458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD04576F29A54B460056E836 /* coordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coordinateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				276B60802991CFDA007E5458 /* Assets.xcassets */,
 				276B60822991CFDA007E5458 /* LaunchScreen.storyboard */,
 				276B60852991CFDA007E5458 /* Info.plist */,
+				AD04576F29A54B460056E836 /* coordinateModel.swift */,
 			);
 			path = TheCoralSafari;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				276B607C2991CFD7007E5458 /* ViewController.swift in Sources */,
 				276B60782991CFD7007E5458 /* AppDelegate.swift in Sources */,
 				276B607A2991CFD7007E5458 /* SceneDelegate.swift in Sources */,
+				AD04577029A54B460056E836 /* coordinateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9XNQXZAVG2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheCoralSafari/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9XNQXZAVG2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheCoralSafari/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
