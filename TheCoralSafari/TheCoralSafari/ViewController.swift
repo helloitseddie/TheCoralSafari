@@ -21,28 +21,34 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @Published var coordinates = []
     @Published var locations: [location] = []
     
+    //##############################################################################################################################
+    //Search Function
+    
+    //Constantly updates map while typing in address | Needs to be updated only when return is pressed
     func updateSearchResults(for searchController: UISearchController) {
 
         guard let text = searchController.searchBar.text else {return}
+        print(text)
 
         searchLocation(addressL: text, delta: 5.0)
         updateMap()
 
     }
     
-    func textFieldShouldReturn(_ searchController: UISearchController) -> Bool{
-        
-        print("Returned")
-        
-        searchController.resignFirstResponder()
-        guard let text = searchController.searchBar.text else {return false}
-        
-        searchLocation(addressL: text, delta: 5.0)
-        updateMap()
-        
-        return true
-        
-    }
+    //Non functional function that should update map oly when return is pressed
+//    func textFieldShouldReturn(_ searchController: UISearchController) -> Bool{
+//
+//        print("Returned")
+//
+//        searchController.resignFirstResponder()
+//        guard let text = searchController.searchBar.text else {return false}
+//
+//        searchLocation(addressL: text, delta: 5.0)
+//        updateMap()
+//
+//        return true
+//
+//    }
     
     // map variable
     @IBOutlet weak var map: MKMapView!
@@ -50,7 +56,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // manages getting location of the device
     let locationManager = CLLocationManager()
     
-    
+    //##############################################################################################################################
+    //Standard functions
     
     override func viewDidLoad() {
         
@@ -86,6 +93,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.startUpdatingLocation()
         
     }
+    
+    //##############################################################################################################################
+    //PIN DETAILS
 
     // Creates a view for the given annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -113,17 +123,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             annotationView?.annotation = annotation
         }
         
-        if annotation.title == "User Searched Location"{
+        if annotation.title != "Lionfish Here"{
             annotationView?.image = UIImage(named: "Red Circle")
         }
-        else if annotation.title == "Lionfish Here"{
+        else{
             annotationView?.image = UIImage(named: "lionfish")
         }
    
         return annotationView
     }
+    
+    //##############################################################################################################################
+    //MAP
    
-   // this function is called when the manager does startUpdatingLocation()
+    //This function is called when the manager does startUpdatingLocation()
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // if a location has been found
         if let location = locations.first{
@@ -136,6 +149,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    //Sets region of the map
     func render(_ location: CLLocation){
         
         // sets the region of the map to be around the user's location
@@ -146,6 +160,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         map.delegate = self
     }
     
+    //##############################################################################################################################
+    //PINS
+    
+    //Makes a pin for a lionfish location
     func addPin(_ coordinate: CLLocationCoordinate2D){
         
         // point annotation is used when all that is needed is the title and subtitle
@@ -166,12 +184,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let pin = MKPointAnnotation()
 
         pin.coordinate = coordinate
-        pin.title = "User Searched Location"
+        pin.title = locations[0].name
+        //pin.title = "User Searched Location"
         
         // adds the created pin to the map.
         map.addAnnotation(pin)
     }
-    
+
+    //This function is what allows users to long press the screen to create a pin
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         
         // if the long press has ended
@@ -188,6 +208,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
         }
     }
+    
+    //##############################################################################################################################
+    //SEARCH BAR API + MAP
     
     //Changes Map Location upon entering search bar
     func updateMap(){
