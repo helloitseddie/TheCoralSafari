@@ -30,6 +30,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     }
     
+    
+    
     func textFieldShouldReturn(_ searchController: UISearchController) -> Bool{
         
         print("Returned")
@@ -49,6 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     // manages getting location of the device
     let locationManager = CLLocationManager()
+    
     
     
     
@@ -83,7 +86,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         
         // updates location based on user's location
-        locationManager.startUpdatingLocation()
+        
+        /* I commented out this code so that it is easier
+           to test the simulator for update location button */
+        //locationManager.startUpdatingLocation()
         
     }
 
@@ -133,6 +139,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             // render the map with the given location
             render(location)
+            
+            // create a pin on the user's location
+            searchPin(location.coordinate)
         }
     }
     
@@ -183,8 +192,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // convert it into a longitude/latitude
             let touchMapCoordinate: CLLocationCoordinate2D = map.convert(point, toCoordinateFrom: map)
             
-            // add the pin to the map
-            addPin(touchMapCoordinate)
+            
+            // modal screen showing confirm cancel
+            let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
+
+            pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+                  print("User confirmed placing pin")
+                // add the pin to the map
+                self.addPin(touchMapCoordinate)
+            }))
+
+            pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+                  print("User canceled placing pin")
+            }))
+
+            present(pinAlert, animated: true, completion: nil)
+            
+          
             
         }
     }
@@ -243,7 +267,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             }
             
         }.resume()
-            
+    }
+    
+    // This action centers the map on user's location on button tap
+    @IBAction func didTapUpdateLocation(_ sender: Any) {
+        locationManager.startUpdatingLocation()
     }
     
 }

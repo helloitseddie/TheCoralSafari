@@ -17,23 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-X7-gBC">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-X7-gBC">
+                                <rect key="frame" x="0.0" y="83" width="393" height="685"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="4oB-D3-Q5I" appends="YES" id="NA5-FY-oMa"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-OM-wVj">
+                                <rect key="frame" x="227" y="783" width="150" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Update Location"/>
+                                <connections>
+                                    <action selector="didTapUpdateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYt-iy-zau"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="GdD-BH-Efe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="FYh-X7-gBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Ct-bW-in5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FYh-X7-gBC" secondAttribute="bottom" id="Dzc-7S-Dfa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FYh-X7-gBC" secondAttribute="trailing" id="Y1r-6z-LtG"/>
-                            <constraint firstItem="FYh-X7-gBC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pdT-lB-Zv3"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dpU-zg-Dtp"/>
                     <connections>
