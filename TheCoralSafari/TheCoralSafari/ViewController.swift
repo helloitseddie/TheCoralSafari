@@ -194,19 +194,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             
             // modal screen showing confirm cancel
-            let refreshAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
+            let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
 
-            refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+            pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
                   print("User confirmed placing pin")
                 // add the pin to the map
                 self.addPin(touchMapCoordinate)
             }))
 
-            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
                   print("User canceled placing pin")
             }))
 
-            present(refreshAlert, animated: true, completion: nil)
+            present(pinAlert, animated: true, completion: nil)
             
           
             
