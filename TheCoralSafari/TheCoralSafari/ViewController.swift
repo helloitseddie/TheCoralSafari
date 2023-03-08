@@ -112,7 +112,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             // customize further here as needed
             
-            // example thing to add: annotationView?.rightAnchor
+            
+                // Creating a label for the lionfish info so that a longer subtitle fits
+                let subtitleView = UILabel()
+                subtitleView.numberOfLines = 0
+                subtitleView.text = annotation.subtitle!
+                annotationView!.detailCalloutAccessoryView = subtitleView
+
             
         }else{
             // sets the view's annotaton to the annotation passed into the method
@@ -155,14 +161,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         map.delegate = self
     }
     
-    func addPin(_ coordinate: CLLocationCoordinate2D){
+    func addPin(_ coordinate: CLLocationCoordinate2D, depth: String, count: String, notes: String){
         
         // point annotation is used when all that is needed is the title and subtitle
         let pin = MKPointAnnotation()
         
+        let message = "Depth: \(depth) \nCount: \(count) \nNotes: \(notes)"
+        
         pin.coordinate = coordinate
         pin.title = "Lionfish Here"
-        pin.subtitle = "Verified Lionfish Location"
+        pin.subtitle = message
         
         // adds the created pin to the map.
         map.addAnnotation(pin)
@@ -196,10 +204,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // modal screen showing confirm cancel
             let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
 
+            pinAlert.addTextField { (textField) in
+                textField.text = "Water Depth"
+            }
+            pinAlert.addTextField { (textField) in
+                textField.text = "Number of Lionfish"
+            }
+            pinAlert.addTextField { (textField) in
+                textField.text = "Notes"
+            }
+            
             pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
                   print("User confirmed placing pin")
+                
+                let depthTextField = pinAlert.textFields![0]
+                let depthText = depthTextField.text
+                
+                let numFishTextField = pinAlert.textFields![1]
+                let numFishText = numFishTextField.text
+                
+                let notesTextField = pinAlert.textFields![2]
+                let notesText = notesTextField.text
+                
                 // add the pin to the map
-                self.addPin(touchMapCoordinate)
+                self.addPin(touchMapCoordinate, depth: depthText!, count: numFishText!, notes: notesText!)
             }))
 
             pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
