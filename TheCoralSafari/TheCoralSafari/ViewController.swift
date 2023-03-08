@@ -202,7 +202,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             
             // modal screen showing confirm cancel
-            let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
+            let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin. Please input the following:", preferredStyle: UIAlertController.Style.alert)
 
             pinAlert.addTextField { (textField) in
                 textField.placeholder = "Water Depth"
@@ -226,8 +226,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 let notesTextField = pinAlert.textFields![2]
                 let notesText = notesTextField.text
                 
-                // add the pin to the map
-                self.addPin(touchMapCoordinate, depth: depthText!, count: numFishText!, notes: notesText!)
+                if depthText!.isEmpty || numFishText!.isEmpty {
+                    
+                    if depthText!.isEmpty{
+                        depthTextField.layer.borderColor = UIColor.red.cgColor
+                        depthTextField.layer.borderWidth = 1
+                    }
+                    if numFishText!.isEmpty{
+                        numFishTextField.layer.borderColor = UIColor.red.cgColor
+                        numFishTextField.layer.borderWidth = 1
+                    }
+                    self.present(pinAlert, animated: true, completion: nil)
+                }else{
+                    // add the pin to the map
+                    self.addPin(touchMapCoordinate, depth: depthText!, count: numFishText!, notes: notesText!)
+                }
             }))
 
             pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
