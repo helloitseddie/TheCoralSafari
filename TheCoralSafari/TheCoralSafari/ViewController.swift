@@ -204,6 +204,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // modal screen showing confirm cancel
             let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin. Please input the following:", preferredStyle: UIAlertController.Style.alert)
 
+            // adding text fields for lionfish info input
             pinAlert.addTextField { (textField) in
                 textField.placeholder = "Water Depth"
             }
@@ -214,9 +215,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 textField.placeholder = "Notes"
             }
             
+            // confirm action
             pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
                   print("User confirmed placing pin")
                 
+                // gathering input
                 let depthTextField = pinAlert.textFields![0]
                 let depthText = depthTextField.text
                 
@@ -226,6 +229,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 let notesTextField = pinAlert.textFields![2]
                 let notesText = notesTextField.text
                 
+                // if either input box is empty, outline it red and ask again
                 if depthText!.isEmpty || numFishText!.isEmpty {
                     
                     if depthText!.isEmpty{
@@ -238,15 +242,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     }
                     self.present(pinAlert, animated: true, completion: nil)
                 }else{
-                    // add the pin to the map
+                    
+                    // add the pin to the map with the info passed to the annotation
                     self.addPin(touchMapCoordinate, depth: depthText!, count: numFishText!, notes: notesText!)
                 }
             }))
 
+            // cancel action
             pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
                   print("User canceled placing pin")
             }))
 
+            // show alert view
             present(pinAlert, animated: true, completion: nil)
             
           
