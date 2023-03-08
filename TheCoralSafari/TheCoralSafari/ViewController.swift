@@ -205,13 +205,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
 
             pinAlert.addTextField { (textField) in
-                textField.text = "Water Depth"
+                textField.placeholder = "Water Depth"
             }
             pinAlert.addTextField { (textField) in
-                textField.text = "Number of Lionfish"
+                textField.placeholder = "Number of Lionfish"
             }
             pinAlert.addTextField { (textField) in
-                textField.text = "Notes"
+                textField.placeholder = "Notes"
             }
             
             pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
