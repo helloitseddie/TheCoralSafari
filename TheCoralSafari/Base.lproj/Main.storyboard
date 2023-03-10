@@ -6,6 +6,7 @@
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,30 +53,67 @@
         <!--View Controller-->
         <scene sceneID="eBY-R8-ojW">
             <objects>
-                <viewController id="KkP-LO-0v7" sceneMemberID="viewController">
+                <viewController id="KkP-LO-0v7" customClass="FAQViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RQw-g4-q7u">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6f-rz-6HX">
-                                <rect key="frame" x="175" y="416" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-ad-GXV">
+                                <rect key="frame" x="0.0" y="118" width="393" height="651"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T18-ed-Hxo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FAQCell" id="cY6-eG-Hv7" customClass="FAQCell" customModule="TheCoralSafari" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rK8-Zf-mAD">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-Lr-iYN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Dlg-Lr-iYN" secondAttribute="trailing" id="Lmh-xC-uTk"/>
+                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="top" secondItem="rK8-Zf-mAD" secondAttribute="top" id="PtT-ya-OAc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dlg-Lr-iYN" secondAttribute="bottom" id="Zcx-nZ-h2y"/>
+                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="leading" secondItem="rK8-Zf-mAD" secondAttribute="leading" id="xV9-UQ-ux3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Dlg-Lr-iYN" id="EWd-S0-uhs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gOb-bq-Nfd"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
-                            <constraint firstItem="m6f-rz-6HX" firstAttribute="centerX" secondItem="gOb-bq-Nfd" secondAttribute="centerX" id="mHb-O6-oGT"/>
-                            <constraint firstItem="m6f-rz-6HX" firstAttribute="centerY" secondItem="gOb-bq-Nfd" secondAttribute="centerY" id="pf0-lu-926"/>
+                            <constraint firstItem="Ovj-ad-GXV" firstAttribute="top" secondItem="gOb-bq-Nfd" secondAttribute="top" constant="15" id="1mS-hN-RNl"/>
+                            <constraint firstItem="Ovj-ad-GXV" firstAttribute="bottom" secondItem="gOb-bq-Nfd" secondAttribute="bottom" id="792-dB-DgR"/>
+                            <constraint firstItem="Ovj-ad-GXV" firstAttribute="trailing" secondItem="gOb-bq-Nfd" secondAttribute="trailing" id="7Bz-kF-AKH"/>
+                            <constraint firstItem="Ovj-ad-GXV" firstAttribute="leading" secondItem="gOb-bq-Nfd" secondAttribute="leading" id="zIt-eS-kKo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iXo-ec-X5I"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Ovj-ad-GXV" id="WM1-Fe-83H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7L-br-saA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1618" y="1485"/>
+            <point key="canvasLocation" x="-1619.0839694656488" y="1484.5070422535211"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VZJ-dk-f3g">
