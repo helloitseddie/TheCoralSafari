@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="BYZ-38-t0r" customClass="ViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-2825" y="1479"/>
         </scene>
-        <!--View Controller-->
+        <!--FAQ-->
         <scene sceneID="eBY-R8-ojW">
             <objects>
-                <viewController id="KkP-LO-0v7" customClass="FAQViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FAQ" id="KkP-LO-0v7" customClass="FAQViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RQw-g4-q7u">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-Lr-iYN">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -92,6 +93,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="Dlg-Lr-iYN" id="EWd-S0-uhs"/>
+                                            <segue destination="WeJ-kV-9z8" kind="show" id="HwK-k4-rYb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -115,10 +117,26 @@
             </objects>
             <point key="canvasLocation" x="-1619.0839694656488" y="1484.5070422535211"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
+        <scene sceneID="DpN-my-lo3">
+            <objects>
+                <viewController id="WeJ-kV-9z8" customClass="SecondViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhF-UJ-i3S">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZeW-A2-dZT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Joc-0m-lq0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRH-hz-pJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1619" y="2199"/>
+        </scene>
+        <!--Account-->
         <scene sceneID="VZJ-dk-f3g">
             <objects>
-                <viewController id="45J-rp-ogz" sceneMemberID="viewController">
+                <viewController title="Account" id="45J-rp-ogz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DN0-A8-uok">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

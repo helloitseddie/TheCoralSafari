@@ -8,26 +8,11 @@
 import UIKit
 
 class FAQViewController: UIViewController, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        faqs.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FAQCell", for: indexPath) as! FAQCell
-
-            let faq = faqs[indexPath.item]
-
-            let title = faq.title
-
-            cell.titleLabel.text = title
-
-            return cell
-    }
-    
 
     var faqs: [FAQ] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +37,32 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
         layout.itemSize = CGSize(width: width, height: width)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        faqs.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FAQCell", for: indexPath) as! FAQCell
+
+            let faq = faqs[indexPath.item]
+
+            let title = faq.title
+
+            cell.titleLabel.text = title
+
+            return cell
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UICollectionViewCell,
+           let indexPath = collectionView.indexPath(for: cell),
+           let secondViewController = segue.destination as? SecondViewController {
+            let faq = faqs[indexPath.row]
+            secondViewController.faq = faq
+        }
+    }
 
 }
+
+
