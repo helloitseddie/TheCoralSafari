@@ -57,7 +57,7 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UICollectionViewCell,
            let indexPath = collectionView.indexPath(for: cell),
-           let secondViewController = segue.destination as? SecondViewController {
+           let secondViewController = segue.destination as? WebViewController {
             let faq = faqs[indexPath.row]
             secondViewController.faq = faq
         }
