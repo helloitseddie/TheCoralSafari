@@ -12,7 +12,7 @@ import MapKit
 // Locations
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchControllerDelegate, UISearchResultsUpdating{
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchControllerDelegate, UISearchBarDelegate{
     
     private let BASE_URL = "http://api.positionstack.com/v1/forward"
     private let API_KEY = "0bf2b1aeb4c7e8c2f89b5614d10b73ea"
@@ -21,34 +21,27 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @Published var coordinates = []
     @Published var locations: [location] = []
     
-    //##############################################################################################################################
-    //Search Function
-    
-    //Constantly updates map while typing in address | Needs to be updated only when return is pressed
-    func updateSearchResults(for searchController: UISearchController) {
-
-        guard let text = searchController.searchBar.text else {return}
-        print(text)
-
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        
+        guard let text = searchBar.text else {return}
+        
         searchLocation(addressL: text, delta: 5.0)
-        updateMap()
-
+        //updateMap()
     }
     
-    //Non functional function that should update map oly when return is pressed
-//    func textFieldShouldReturn(_ searchController: UISearchController) -> Bool{
-//
-//        print("Returned")
-//
-//        searchController.resignFirstResponder()
-//        guard let text = searchController.searchBar.text else {return false}
-//
-//        searchLocation(addressL: text, delta: 5.0)
-//        updateMap()
-//
-//        return true
-//
-//    }
+    func textFieldShouldReturn(_ searchController: UISearchController) -> Bool{
+        
+        print("Returned")
+        
+        searchController.resignFirstResponder()
+        guard let text = searchController.searchBar.text else {return false}
+        
+        searchLocation(addressL: text, delta: 5.0)
+        updateMap()
+        
+        return true
+        
+    }
     
     // map variable
     @IBOutlet weak var map: MKMapView!
@@ -56,8 +49,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // manages getting location of the device
     let locationManager = CLLocationManager()
     
-    //##############################################################################################################################
-    //Standard functions
+    
+    
     
     override func viewDidLoad() {
         
@@ -65,8 +58,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         let search = UISearchController(searchResultsController: nil)
         search.delegate = self
-        search.searchResultsUpdater = self
-        search.searchBar.returnKeyType = .done
+        search.searchBar.delegate = self
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.placeholder = "Enter location or coordinates"
         navigationItem.searchController = search
@@ -90,12 +82,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         
         // updates location based on user's location
-        locationManager.startUpdatingLocation()
+        
+        /* I commented out this code so that it is easier
+           to test the simulator for update location button */
+        //locationManager.startUpdatingLocation()
         
     }
-    
-    //##############################################################################################################################
-    //PIN DETAILS
 
     // Creates a view for the given annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -123,20 +115,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             annotationView?.annotation = annotation
         }
         
-        if annotation.title != "Lionfish Here"{
+        if annotation.title == "User Searched Location"{
             annotationView?.image = UIImage(named: "Red Circle")
         }
-        else{
+        else if annotation.title == "Lionfish Here"{
             annotationView?.image = UIImage(named: "lionfish")
         }
    
         return annotationView
     }
-    
-    //##############################################################################################################################
-    //MAP
    
-    //This function is called when the manager does startUpdatingLocation()
+   // this function is called when the manager does startUpdatingLocation()
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // if a location has been found
         if let location = locations.first{
@@ -146,10 +135,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             
             // render the map with the given location
             render(location)
+            
+            // create a pin on the user's location
+            searchPin(location.coordinate)
         }
     }
     
-    //Sets region of the map
     func render(_ location: CLLocation){
         
         // sets the region of the map to be around the user's location
@@ -160,10 +151,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         map.delegate = self
     }
     
-    //##############################################################################################################################
-    //PINS
-    
-    //Makes a pin for a lionfish location
     func addPin(_ coordinate: CLLocationCoordinate2D){
         
         // point annotation is used when all that is needed is the title and subtitle
@@ -184,14 +171,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let pin = MKPointAnnotation()
 
         pin.coordinate = coordinate
-        pin.title = locations[0].name
-        //pin.title = "User Searched Location"
+        pin.title = "User Searched Location"
         
         // adds the created pin to the map.
         map.addAnnotation(pin)
     }
-
-    //This function is what allows users to long press the screen to create a pin
+    
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         
         // if the long press has ended
@@ -203,18 +188,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // convert it into a longitude/latitude
             let touchMapCoordinate: CLLocationCoordinate2D = map.convert(point, toCoordinateFrom: map)
             
-            // add the pin to the map
-            addPin(touchMapCoordinate)
+            
+            // modal screen showing confirm cancel
+            let pinAlert = UIAlertController(title: "Lionfish Found", message: "This action will place a lionfish pin at long press location", preferredStyle: UIAlertController.Style.alert)
+
+            pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+                  print("User confirmed placing pin")
+                // add the pin to the map
+                self.addPin(touchMapCoordinate)
+            }))
+
+            pinAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+                  print("User canceled placing pin")
+            }))
+
+            present(pinAlert, animated: true, completion: nil)
+            
+          
             
         }
     }
     
-    //##############################################################################################################################
-    //SEARCH BAR API + MAP
-    
     //Changes Map Location upon entering search bar
     func updateMap(){
-
+        print("I was called")
         if !coordinates.isEmpty{
             let latitude:Double = coordinates[0] as! Double
             let longitude:Double = coordinates[1] as! Double
@@ -262,11 +259,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 self.locations.removeAll()
                 self.locations.insert(new_location, at: 0)
                 
-                //print("Successfully loaded the location!")
+                print("Successfully loaded the location!")
+                self.updateMap()
             }
             
         }.resume()
-            
+        //updateMap()
+    }
+    
+    // This action centers the map on user's location on button tap
+    @IBAction func didTapUpdateLocation(_ sender: Any) {
+        locationManager.startUpdatingLocation()
     }
     
 }
