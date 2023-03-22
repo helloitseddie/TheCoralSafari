@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  TheCoralSafari
 //
-//  Created by Eddie Briscoe on 3/20/23.
+//  Created by Rachel Quijano on 2/6/23.
 //
 
 import UIKit

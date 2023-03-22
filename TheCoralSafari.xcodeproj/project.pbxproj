@@ -7,48 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42857F0929C92BE200E5D885 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F0829C92BE200E5D885 /* MapViewController.swift */; };
+		42857F0B29C92C2600E5D885 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F0A29C92C2600E5D885 /* FAQViewController.swift */; };
+		42857F0E29C92C4600E5D885 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F0D29C92C4600E5D885 /* FAQCell.swift */; };
+		42857F1029C92C4B00E5D885 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F0F29C92C4B00E5D885 /* FAQ.swift */; };
+		42857F1329C92C6100E5D885 /* coordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F1229C92C6100E5D885 /* coordinateModel.swift */; };
+		42857F1629C92C8700E5D885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F1529C92C8700E5D885 /* WebViewController.swift */; };
+		42E594F829C935F500BFD00D /* pinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E594F729C935F500BFD00D /* pinModel.swift */; };
 		42FD84EA29C92602003F595B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD84E929C92602003F595B /* AppDelegate.swift */; };
 		42FD84EC29C92602003F595B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD84EB29C92602003F595B /* SceneDelegate.swift */; };
-		42FD84EE29C92602003F595B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD84ED29C92602003F595B /* ViewController.swift */; };
 		42FD84F129C92602003F595B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FD84EF29C92602003F595B /* Main.storyboard */; };
 		42FD84F329C92603003F595B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FD84F229C92603003F595B /* Assets.xcassets */; };
 		42FD84F629C92603003F595B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FD84F429C92603003F595B /* LaunchScreen.storyboard */; };
-		42FD850129C92603003F595B /* TheCoralSafariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD850029C92603003F595B /* TheCoralSafariTests.swift */; };
-		42FD850B29C92603003F595B /* TheCoralSafariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD850A29C92603003F595B /* TheCoralSafariUITests.swift */; };
-		42FD850D29C92603003F595B /* TheCoralSafariUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD850C29C92603003F595B /* TheCoralSafariUITestsLaunchTests.swift */; };
+		42FD851D29C9273F003F595B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD851C29C9273F003F595B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		42FD84FD29C92603003F595B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42FD84DE29C92602003F595B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42FD84E529C92602003F595B;
-			remoteInfo = TheCoralSafari;
-		};
-		42FD850729C92603003F595B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42FD84DE29C92602003F595B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42FD84E529C92602003F595B;
-			remoteInfo = TheCoralSafari;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		42857F0829C92BE200E5D885 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		42857F0A29C92C2600E5D885 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		42857F0D29C92C4600E5D885 /* FAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
+		42857F0F29C92C4B00E5D885 /* FAQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		42857F1229C92C6100E5D885 /* coordinateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coordinateModel.swift; sourceTree = "<group>"; };
+		42857F1429C92C7D00E5D885 /* TheCoralSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheCoralSafari.entitlements; sourceTree = "<group>"; };
+		42857F1529C92C8700E5D885 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		42E594F729C935F500BFD00D /* pinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinModel.swift; sourceTree = "<group>"; };
 		42FD84E629C92602003F595B /* TheCoralSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheCoralSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FD84E929C92602003F595B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FD84EB29C92602003F595B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42FD84ED29C92602003F595B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42FD84F029C92602003F595B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42FD84F229C92603003F595B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42FD84F529C92603003F595B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42FD84F729C92603003F595B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42FD84FC29C92603003F595B /* TheCoralSafariTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheCoralSafariTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		42FD850029C92603003F595B /* TheCoralSafariTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCoralSafariTests.swift; sourceTree = "<group>"; };
-		42FD850629C92603003F595B /* TheCoralSafariUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheCoralSafariUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		42FD850A29C92603003F595B /* TheCoralSafariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCoralSafariUITests.swift; sourceTree = "<group>"; };
-		42FD850C29C92603003F595B /* TheCoralSafariUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCoralSafariUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		42FD851C29C9273F003F595B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,29 +49,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42FD84F929C92603003F595B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42FD850329C92603003F595B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42857F0C29C92C3700E5D885 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				42857F0F29C92C4B00E5D885 /* FAQ.swift */,
+				42857F0D29C92C4600E5D885 /* FAQCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		42857F1129C92C5100E5D885 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42857F1229C92C6100E5D885 /* coordinateModel.swift */,
+				42E594F729C935F500BFD00D /* pinModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42857F1729C92DBA00E5D885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42FD84F429C92603003F595B /* LaunchScreen.storyboard */,
+				42FD84EF29C92602003F595B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		42FD84DD29C92602003F595B = {
 			isa = PBXGroup;
 			children = (
 				42FD84E829C92602003F595B /* TheCoralSafari */,
-				42FD84FF29C92603003F595B /* TheCoralSafariTests */,
-				42FD850929C92603003F595B /* TheCoralSafariUITests */,
 				42FD84E729C92602003F595B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				42FD84E629C92602003F595B /* TheCoralSafari.app */,
-				42FD84FC29C92603003F595B /* TheCoralSafariTests.xctest */,
-				42FD850629C92603003F595B /* TheCoralSafariUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,30 +100,26 @@
 			children = (
 				42FD84E929C92602003F595B /* AppDelegate.swift */,
 				42FD84EB29C92602003F595B /* SceneDelegate.swift */,
-				42FD84ED29C92602003F595B /* ViewController.swift */,
-				42FD84EF29C92602003F595B /* Main.storyboard */,
 				42FD84F229C92603003F595B /* Assets.xcassets */,
-				42FD84F429C92603003F595B /* LaunchScreen.storyboard */,
+				42857F1729C92DBA00E5D885 /* Views */,
+				42857F1129C92C5100E5D885 /* Models */,
+				42857F0C29C92C3700E5D885 /* Components */,
+				42FD851B29C92660003F595B /* ViewControllers */,
 				42FD84F729C92603003F595B /* Info.plist */,
+				42857F1429C92C7D00E5D885 /* TheCoralSafari.entitlements */,
 			);
 			path = TheCoralSafari;
 			sourceTree = "<group>";
 		};
-		42FD84FF29C92603003F595B /* TheCoralSafariTests */ = {
+		42FD851B29C92660003F595B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				42FD850029C92603003F595B /* TheCoralSafariTests.swift */,
+				42857F1529C92C8700E5D885 /* WebViewController.swift */,
+				42857F0A29C92C2600E5D885 /* FAQViewController.swift */,
+				42FD851C29C9273F003F595B /* LoginViewController.swift */,
+				42857F0829C92BE200E5D885 /* MapViewController.swift */,
 			);
-			path = TheCoralSafariTests;
-			sourceTree = "<group>";
-		};
-		42FD850929C92603003F595B /* TheCoralSafariUITests */ = {
-			isa = PBXGroup;
-			children = (
-				42FD850A29C92603003F595B /* TheCoralSafariUITests.swift */,
-				42FD850C29C92603003F595B /* TheCoralSafariUITestsLaunchTests.swift */,
-			);
-			path = TheCoralSafariUITests;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +142,6 @@
 			productReference = 42FD84E629C92602003F595B /* TheCoralSafari.app */;
 			productType = "com.apple.product-type.application";
 		};
-		42FD84FB29C92603003F595B /* TheCoralSafariTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 42FD851329C92603003F595B /* Build configuration list for PBXNativeTarget "TheCoralSafariTests" */;
-			buildPhases = (
-				42FD84F829C92603003F595B /* Sources */,
-				42FD84F929C92603003F595B /* Frameworks */,
-				42FD84FA29C92603003F595B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				42FD84FE29C92603003F595B /* PBXTargetDependency */,
-			);
-			name = TheCoralSafariTests;
-			productName = TheCoralSafariTests;
-			productReference = 42FD84FC29C92603003F595B /* TheCoralSafariTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		42FD850529C92603003F595B /* TheCoralSafariUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 42FD851629C92603003F595B /* Build configuration list for PBXNativeTarget "TheCoralSafariUITests" */;
-			buildPhases = (
-				42FD850229C92603003F595B /* Sources */,
-				42FD850329C92603003F595B /* Frameworks */,
-				42FD850429C92603003F595B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				42FD850829C92603003F595B /* PBXTargetDependency */,
-			);
-			name = TheCoralSafariUITests;
-			productName = TheCoralSafariUITests;
-			productReference = 42FD850629C92603003F595B /* TheCoralSafariUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +154,6 @@
 				TargetAttributes = {
 					42FD84E529C92602003F595B = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					42FD84FB29C92603003F595B = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 42FD84E529C92602003F595B;
-					};
-					42FD850529C92603003F595B = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 42FD84E529C92602003F595B;
 					};
 				};
 			};
@@ -220,8 +171,6 @@
 			projectRoot = "";
 			targets = (
 				42FD84E529C92602003F595B /* TheCoralSafari */,
-				42FD84FB29C92603003F595B /* TheCoralSafariTests */,
-				42FD850529C92603003F595B /* TheCoralSafariUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,20 +186,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42FD84FA29C92603003F595B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42FD850429C92603003F595B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,43 +193,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42FD84EE29C92602003F595B /* ViewController.swift in Sources */,
+				42FD851D29C9273F003F595B /* LoginViewController.swift in Sources */,
+				42857F1629C92C8700E5D885 /* WebViewController.swift in Sources */,
+				42857F1329C92C6100E5D885 /* coordinateModel.swift in Sources */,
 				42FD84EA29C92602003F595B /* AppDelegate.swift in Sources */,
+				42857F0929C92BE200E5D885 /* MapViewController.swift in Sources */,
+				42E594F829C935F500BFD00D /* pinModel.swift in Sources */,
+				42857F0B29C92C2600E5D885 /* FAQViewController.swift in Sources */,
+				42857F1029C92C4B00E5D885 /* FAQ.swift in Sources */,
+				42857F0E29C92C4600E5D885 /* FAQCell.swift in Sources */,
 				42FD84EC29C92602003F595B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42FD84F829C92603003F595B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42FD850129C92603003F595B /* TheCoralSafariTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42FD850229C92603003F595B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42FD850D29C92603003F595B /* TheCoralSafariUITestsLaunchTests.swift in Sources */,
-				42FD850B29C92603003F595B /* TheCoralSafariUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		42FD84FE29C92603003F595B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42FD84E529C92602003F595B /* TheCoralSafari */;
-			targetProxy = 42FD84FD29C92603003F595B /* PBXContainerItemProxy */;
-		};
-		42FD850829C92603003F595B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42FD84E529C92602003F595B /* TheCoralSafari */;
-			targetProxy = 42FD850729C92603003F595B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		42FD84EF29C92602003F595B /* Main.storyboard */ = {
@@ -486,82 +398,6 @@
 			};
 			name = Release;
 		};
-		42FD851429C92603003F595B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6BPV2KA2D8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eddie.TheCoralSafariTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheCoralSafari.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheCoralSafari";
-			};
-			name = Debug;
-		};
-		42FD851529C92603003F595B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6BPV2KA2D8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eddie.TheCoralSafariTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheCoralSafari.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheCoralSafari";
-			};
-			name = Release;
-		};
-		42FD851729C92603003F595B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6BPV2KA2D8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eddie.TheCoralSafariUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TheCoralSafari;
-			};
-			name = Debug;
-		};
-		42FD851829C92603003F595B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6BPV2KA2D8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eddie.TheCoralSafariUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TheCoralSafari;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,24 +415,6 @@
 			buildConfigurations = (
 				42FD851129C92603003F595B /* Debug */,
 				42FD851229C92603003F595B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		42FD851329C92603003F595B /* Build configuration list for PBXNativeTarget "TheCoralSafariTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				42FD851429C92603003F595B /* Debug */,
-				42FD851529C92603003F595B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		42FD851629C92603003F595B /* Build configuration list for PBXNativeTarget "TheCoralSafariUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				42FD851729C92603003F595B /* Debug */,
-				42FD851829C92603003F595B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
