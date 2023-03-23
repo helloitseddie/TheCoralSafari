@@ -13,6 +13,7 @@
 		42857F1029C92C4B00E5D885 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F0F29C92C4B00E5D885 /* FAQ.swift */; };
 		42857F1329C92C6100E5D885 /* coordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F1229C92C6100E5D885 /* coordinateModel.swift */; };
 		42857F1629C92C8700E5D885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42857F1529C92C8700E5D885 /* WebViewController.swift */; };
+		42A894B629CBCB940079188D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A894B529CBCB940079188D /* AccountViewController.swift */; };
 		42E594F829C935F500BFD00D /* pinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E594F729C935F500BFD00D /* pinModel.swift */; };
 		42FD84EA29C92602003F595B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD84E929C92602003F595B /* AppDelegate.swift */; };
 		42FD84EC29C92602003F595B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD84EB29C92602003F595B /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		42857F1229C92C6100E5D885 /* coordinateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coordinateModel.swift; sourceTree = "<group>"; };
 		42857F1429C92C7D00E5D885 /* TheCoralSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheCoralSafari.entitlements; sourceTree = "<group>"; };
 		42857F1529C92C8700E5D885 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		42A894B529CBCB940079188D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		42E594F729C935F500BFD00D /* pinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinModel.swift; sourceTree = "<group>"; };
 		42FD84E629C92602003F595B /* TheCoralSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheCoralSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FD84E929C92602003F595B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				42857F0A29C92C2600E5D885 /* FAQViewController.swift */,
 				42FD851C29C9273F003F595B /* LoginViewController.swift */,
 				42857F0829C92BE200E5D885 /* MapViewController.swift */,
+				42A894B529CBCB940079188D /* AccountViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				42857F1029C92C4B00E5D885 /* FAQ.swift in Sources */,
 				42857F0E29C92C4600E5D885 /* FAQCell.swift in Sources */,
 				42FD84EC29C92602003F595B /* SceneDelegate.swift in Sources */,
+				42A894B629CBCB940079188D /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

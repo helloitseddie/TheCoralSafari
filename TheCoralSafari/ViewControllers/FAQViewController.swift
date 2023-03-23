@@ -19,8 +19,6 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
 
         // Do any additional setup after loading the view.
         faqs = FAQ.FAQs
-        print(faqs)
-
         collectionView.dataSource = self
         
 
