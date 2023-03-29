@@ -49,14 +49,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // manages getting location of the device
     let locationManager = CLLocationManager()
     
-    
-    
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        
+        activityIndicator.color = .orange
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
         queryAllPinsFromServer()
         
         let search = UISearchController(searchResultsController: nil)
@@ -125,12 +126,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func queryAllPinsFromServer() {
+        view.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
         let url = URL(string: "https://us-east1-portfolio-bd41c.cloudfunctions.net/api/pins")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let safeData = data else { return }
+            print(safeData)
             let decoder = JSONDecoder()
             let pins = try! decoder.decode([Pin].self, from: safeData)
             DispatchQueue.main.async {
@@ -139,6 +143,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     self.addPin(coordinate: CLLocationCoordinate2D(latitude: pin.location.lat, longitude: pin.location.lon), title: pin.title, depth: pin.depth, count: pin.count, notes: pin.notes)
                 }
                 self.map.delegate = self
+                self.view.isUserInteractionEnabled = true
+                self.activityIndicator.stopAnimating()
             }
         }
         task.resume()
@@ -204,6 +210,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func uploadPinToDatabase(title: String, user: String, location: CLLocationCoordinate2D, depth: Int, count: Int, notes: String) {
+        view.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
         // Define the URL you want to post to
         let url = URL(string: "https://us-east1-portfolio-bd41c.cloudfunctions.net/api/pins")!
 
@@ -233,7 +241,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
         // Create a URLSessionDataTask to send the request
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            // Handle the response here
+            DispatchQueue.main.async {
+                self.view.isUserInteractionEnabled = true
+                self.activityIndicator.stopAnimating()
+            }
         }
         task.resume()
     }
@@ -269,7 +280,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             // confirm action
             pinAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
-                  print("User confirmed placing pin")
                 
                 // gathering input
                 let titleTextField = pinAlert.textFields![0]
@@ -277,11 +287,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 
                 let depthTextField = pinAlert.textFields![1]
                 guard let depthText = depthTextField.text else { return }
-                guard let depthNum = Int(depthText) else { return }
+                guard let depthNum = Int(depthText) else {
+                    let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid integer for depth. Avoid units such as 'ft' or 'm'", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
                 
                 let numFishTextField = pinAlert.textFields![2]
                 guard let numFishText = numFishTextField.text else { return }
-                guard let numFish = Int(numFishText) else { return }
+                guard let numFish = Int(numFishText) else {
+                    let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid integer for number of fish.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
                 
                 let notesTextField = pinAlert.textFields![3]
                 let notesText = notesTextField.text
@@ -303,7 +325,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     }
                     self.present(pinAlert, animated: true, completion: nil)
                 } else {
-                    
                     let defaults = UserDefaults.standard
                     guard let safeUsername = defaults.object(forKey: "username") as? String else { return }
                     
@@ -311,6 +332,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     
                     // add the pin to the map with the info passed to the annotation
                     self.addPin(coordinate: touchMapCoordinate, title: titleText, depth: depthNum, count: numFish, notes: notesText!)
+                    
+                    print("User confirmed placing pin")
                 }
             }))
 
