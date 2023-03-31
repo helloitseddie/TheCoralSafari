@@ -12,14 +12,24 @@ import MapKit
 // Locations
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchControllerDelegate, UISearchBarDelegate{
-    
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating{
+       
     private let BASE_URL = "http://api.positionstack.com/v1/forward"
     private let API_KEY = "0bf2b1aeb4c7e8c2f89b5614d10b73ea"
     
     @Published var region: MKCoordinateRegion!
     @Published var coordinates = []
     @Published var locations: [location] = []
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let allPins = map.annotations
+        for x in allPins{
+            if x.title == "User Searched Location" {
+                print("Removing Location Pin")
+                map.removeAnnotation(x)
+            }
+        }
+    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
         
@@ -64,6 +74,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         search.delegate = self
         search.searchBar.delegate = self
         search.obscuresBackgroundDuringPresentation = false
+        search.searchResultsUpdater = self
         search.searchBar.placeholder = "Enter location or coordinates"
         navigationItem.searchController = search
         
