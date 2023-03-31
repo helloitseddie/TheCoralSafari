@@ -32,7 +32,7 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
 
         let width = (collectionView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
 
-        layout.itemSize = CGSize(width: 380, height: 98)
+        layout.itemSize = CGSize(width: 380, height: 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,6 +47,10 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
             let title = faq.title
 
             cell.titleLabel.text = title
+        
+            let image = faq.image
+        
+            cell.imageView.image = image
 
             return cell
     }
