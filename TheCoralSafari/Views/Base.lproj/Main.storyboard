@@ -22,35 +22,42 @@
                                 <rect key="frame" x="0.0" y="118" width="393" height="651"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T18-ed-Hxo">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="383" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FAQCell" id="cY6-eG-Hv7" customClass="FAQCell" customModule="TheCoralSafari" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="5" y="0.0" width="383" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rK8-Zf-mAD">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-Lr-iYN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-Lr-iYN">
+                                                    <rect key="frame" x="0.0" y="83" width="383" height="21"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lionfish" translatesAutoresizingMaskIntoConstraints="NO" id="Pmj-l9-3Jf">
+                                                    <rect key="frame" x="130" y="0.0" width="123" height="85"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Dlg-Lr-iYN" secondAttribute="trailing" id="Lmh-xC-uTk"/>
-                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="top" secondItem="rK8-Zf-mAD" secondAttribute="top" id="PtT-ya-OAc"/>
-                                                <constraint firstAttribute="bottom" secondItem="Dlg-Lr-iYN" secondAttribute="bottom" id="Zcx-nZ-h2y"/>
-                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="leading" secondItem="rK8-Zf-mAD" secondAttribute="leading" id="xV9-UQ-ux3"/>
+                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="top" secondItem="Pmj-l9-3Jf" secondAttribute="bottom" constant="-2" id="1X5-wo-jWR"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dlg-Lr-iYN" secondAttribute="trailing" id="Ayb-oP-hW4"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dlg-Lr-iYN" secondAttribute="bottom" id="Tm7-da-Qqs"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pmj-l9-3Jf" secondAttribute="trailing" constant="130" id="by4-ew-FkP"/>
+                                                <constraint firstItem="Pmj-l9-3Jf" firstAttribute="leading" secondItem="rK8-Zf-mAD" secondAttribute="leading" constant="130" id="eO4-cV-bnj"/>
+                                                <constraint firstItem="Pmj-l9-3Jf" firstAttribute="top" secondItem="rK8-Zf-mAD" secondAttribute="top" id="hRq-xM-ADW"/>
+                                                <constraint firstItem="Dlg-Lr-iYN" firstAttribute="leading" secondItem="rK8-Zf-mAD" secondAttribute="leading" id="i9l-hH-P5w"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="383" height="104"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="Dlg-Lr-iYN" id="EWd-S0-uhs"/>
                                             <segue destination="WeJ-kV-9z8" kind="showDetail" id="HwK-k4-rYb"/>
@@ -626,6 +633,7 @@
     <resources>
         <image name="Wave" width="600" height="800"/>
         <image name="accountBanner" width="600" height="501"/>
+        <image name="lionfish" width="100" height="71"/>
         <image name="lionicon" width="524" height="514"/>
         <image name="menuGrid" width="1020" height="371"/>
         <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
