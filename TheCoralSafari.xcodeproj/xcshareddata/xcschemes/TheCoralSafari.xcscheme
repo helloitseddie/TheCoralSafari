@@ -14,7 +14,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< Updated upstream
                BlueprintIdentifier = "276B60732991CFD7007E5458"
+=======
+               BlueprintIdentifier = "42FD84E529C92602003F595B"
+>>>>>>> Stashed changes
                BuildableName = "TheCoralSafari.app"
                BlueprintName = "TheCoralSafari"
                ReferencedContainer = "container:TheCoralSafari.xcodeproj">
@@ -45,7 +49,11 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+<<<<<<< Updated upstream
             BlueprintIdentifier = "276B60732991CFD7007E5458"
+=======
+            BlueprintIdentifier = "42FD84E529C92602003F595B"
+>>>>>>> Stashed changes
             BuildableName = "TheCoralSafari.app"
             BlueprintName = "TheCoralSafari"
             ReferencedContainer = "container:TheCoralSafari.xcodeproj">
@@ -62,7 +70,11 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+<<<<<<< Updated upstream
             BlueprintIdentifier = "276B60732991CFD7007E5458"
+=======
+            BlueprintIdentifier = "42FD84E529C92602003F595B"
+>>>>>>> Stashed changes
             BuildableName = "TheCoralSafari.app"
             BlueprintName = "TheCoralSafari"
             ReferencedContainer = "container:TheCoralSafari.xcodeproj">

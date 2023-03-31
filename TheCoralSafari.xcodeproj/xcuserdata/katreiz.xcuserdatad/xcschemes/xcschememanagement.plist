@@ -12,7 +12,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+<<<<<<< Updated upstream
 		<key>276B60732991CFD7007E5458</key>
+=======
+		<key>42FD84E529C92602003F595B</key>
+>>>>>>> Stashed changes
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -26,15 +26,15 @@ class FAQViewController: UIViewController, UICollectionViewDataSource {
 
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
 
-        layout.minimumInteritemSpacing = 4
+        layout.minimumInteritemSpacing = 1
 
-        layout.minimumLineSpacing = 4
+        layout.minimumLineSpacing = 6
 
-        let numberOfColumns: CGFloat = 3
+        let numberOfColumns: CGFloat = 1
 
         let width = (collectionView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
 
-        layout.itemSize = CGSize(width: width, height: width)
+        layout.itemSize = CGSize(width: 328, height: 108)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
