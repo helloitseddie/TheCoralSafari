@@ -117,7 +117,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if annotation.title == "User Searched Location" {
             annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "searchedLocation") ?? MKAnnotationView(annotation: annotation, reuseIdentifier: "searchedLocation")
             
-            annotationView?.image = UIImage(named: "Red Circle")
+            annotationView?.image = UIImage(named: "Search Pin")
         } else {
             annotationView = BottomAnchoredPinAnnotationView(annotation: annotation, reuseIdentifier: "lionfishLocation")
             
