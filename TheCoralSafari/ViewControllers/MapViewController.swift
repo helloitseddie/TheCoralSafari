@@ -235,7 +235,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 "lon": location.longitude
             ],
             "depth": depth,
-            "count": depth,
+            "count": count,
             "notes": notes
         ]
         let jsonData = try! JSONSerialization.data(withJSONObject: json)
