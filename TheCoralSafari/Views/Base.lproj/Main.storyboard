@@ -466,7 +466,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wave" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-wy-zNb">
-                                <rect key="frame" x="0.0" y="107" width="393" height="800"/>
+                                <rect key="frame" x="0.0" y="107" width="393" height="745"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lionicon" translatesAutoresizingMaskIntoConstraints="NO" id="SOT-ix-T6K">
                                 <rect key="frame" x="-65.666666666666686" y="59" width="524.33333333333337" height="198"/>
@@ -475,13 +475,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Log In!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3u-1c-j2p">
-                                <rect key="frame" x="20" y="436" width="153.66666666666666" height="35"/>
+                                <rect key="frame" x="20" y="408.66666666666669" width="153.66666666666666" height="35"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                 <color key="textColor" red="0.15294116739999999" green="0.3686274886" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="20" background="square.and.arrow.up.circle.fill" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vqT-Ig-YEM">
-                                <rect key="frame" x="79.666666666666686" y="491" width="234" height="35.333333333333371"/>
+                                <rect key="frame" x="79.666666666666686" y="463.66666666666669" width="234" height="35"/>
                                 <color key="tintColor" red="0.73725497719999999" green="0.34117650989999998" blue="0.1647058874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <constraints>
@@ -492,7 +492,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="20" background="square.and.arrow.up.circle.fill" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aB1-wS-1JO">
-                                <rect key="frame" x="79.666666666666686" y="536.33333333333337" width="234" height="35.333333333333371"/>
+                                <rect key="frame" x="79.666666666666686" y="508.66666666666669" width="234" height="35.333333333333314"/>
                                 <color key="tintColor" red="0.73725497719999999" green="0.34117650989999998" blue="0.1647058874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <constraints>
@@ -503,7 +503,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-8m-5aT">
-                                <rect key="frame" x="76" y="604" width="241" height="43.333333333333371"/>
+                                <rect key="frame" x="76" y="576.66666666666663" width="241" height="43"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OpH-8m-5aT" secondAttribute="height" multiplier="262:47" id="Zad-2P-iCh"/>
@@ -530,7 +530,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3u-rG-hZN">
-                                <rect key="frame" x="157.33333333333334" y="661" width="78.666666666666657" height="34.666666666666629"/>
+                                <rect key="frame" x="157.33333333333334" y="633.33333333333337" width="78.666666666666657" height="34.666666666666629"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -602,27 +602,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Usw-Bc-q7O">
-                                <rect key="frame" x="0.0" y="83" width="393" height="685"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usw-Bc-q7O">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.3058823645" green="0.61176472900000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="rqX-ku-R15" appends="YES" id="IK9-Gi-ygI"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5A-6k-3xe">
-                                <rect key="frame" x="227" y="678" width="150" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5A-6k-3xe">
+                                <rect key="frame" x="327" y="687" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="pU3-Uo-LXR"/>
+                                    <constraint firstAttribute="height" constant="50" id="u4N-rv-IHw"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Update Location"/>
+                                <buttonConfiguration key="configuration" style="filled" image="UpdateLocation">
+                                    <color key="baseBackgroundColor" red="0.3058823645" green="0.61176472900000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapUpdateLocation:" destination="FxT-XK-CII" eventType="touchUpInside" id="T1m-zO-19w"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Goz-Mg-jrw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.3058823645" green="0.61176472900000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Usw-Bc-q7O" firstAttribute="top" secondItem="aOk-f8-NF3" secondAttribute="top" id="U5k-Z8-ylZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Usw-Bc-q7O" secondAttribute="bottom" id="WqZ-Qf-by6"/>
+                            <constraint firstItem="Usw-Bc-q7O" firstAttribute="leading" secondItem="aOk-f8-NF3" secondAttribute="leading" id="jRf-Gq-rvt"/>
+                            <constraint firstItem="Goz-Mg-jrw" firstAttribute="bottom" secondItem="c5A-6k-3xe" secondAttribute="bottom" constant="32" id="nWU-yu-ydH"/>
+                            <constraint firstAttribute="trailing" secondItem="Usw-Bc-q7O" secondAttribute="trailing" id="ymU-YJ-jtd"/>
+                            <constraint firstItem="Goz-Mg-jrw" firstAttribute="trailing" secondItem="c5A-6k-3xe" secondAttribute="trailing" constant="16" id="zV9-7Z-lHy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lWX-5I-BS5"/>
                     <connections>
@@ -636,10 +649,11 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2825" y="1485"/>
+            <point key="canvasLocation" x="-2825.1908396946565" y="1484.5070422535211"/>
         </scene>
     </scenes>
     <resources>
+        <image name="UpdateLocation" width="25" height="25"/>
         <image name="Wave" width="600" height="800"/>
         <image name="accountBanner" width="600" height="501"/>
         <image name="lionicon" width="524" height="514"/>
