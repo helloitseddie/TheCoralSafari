@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -23,8 +23,15 @@ class LoginViewController: UIViewController {
         errorMessage.text = ""
     }
     
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.username.delegate = self
+        self.password.delegate = self
         
         let defaults = UserDefaults.standard
         guard let safeLogin = defaults.object(forKey: "isLoggedIn") as? Bool else { return }
