@@ -228,7 +228,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Member Since">
                                                         <attributes>
-                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="27" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -238,10 +238,11 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-Lo-bsB">
                                                 <rect key="frame" x="331.33333333333331" y="92.666666666666629" width="22.333333333333314" height="24"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=". . .">
                                                         <attributes>
-                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="24" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -251,21 +252,24 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIN-Vz-IeT">
                                                 <rect key="frame" x="185.33333333333334" y="92.666666666666629" width="22.333333333333343" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=". . .">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="24" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
-                                                <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-Pp-ev7">
                                                 <rect key="frame" x="312.66666666666669" y="0.0" width="59.333333333333314" height="24"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Lionfish">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="24" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -275,9 +279,11 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOZ-Y6-Mfe">
                                                 <rect key="frame" x="38" y="0.0" width="32.333333333333343" height="24"/>
+                                                <color key="tintColor" red="0.9098039269" green="0.52941179279999995" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Pins">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="24" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -290,6 +296,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Spotted">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="27" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -299,9 +306,11 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-U7-Lh2">
                                                 <rect key="frame" x="20" y="24" width="68" height="29"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Marked">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="29" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -311,10 +320,11 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B3-hc-RBp">
                                                 <rect key="frame" x="43" y="92.666666666666629" width="22.333333333333329" height="24"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=". . .">
                                                         <attributes>
-                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="24" name="DINCondensed-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -594,6 +604,57 @@
             </objects>
             <point key="canvasLocation" x="-1509.1603053435115" y="-756.33802816901414"/>
         </scene>
+        <!--tutorial-->
+        <scene sceneID="G18-NY-hZM">
+            <objects>
+                <viewController storyboardIdentifier="tutorial" id="inn-hh-7BU" userLabel="tutorial" customClass="TutorialViewController" customModule="TheCoralSafari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GhL-ti-oLk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-Ks-VF3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="tutorial1" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-Af-hZA">
+                                        <rect key="frame" x="15" y="67" width="363" height="627"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap Anywhere to Continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etr-fG-9Fu">
+                                        <rect key="frame" x="57" y="719" width="279" height="35"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549830000001" green="0.2901961207" blue="0.3803921938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Etr-fG-9Fu" secondAttribute="bottom" constant="98" id="Hgo-Du-4Og"/>
+                                    <constraint firstItem="jIJ-Af-hZA" firstAttribute="leading" secondItem="L5W-Ks-VF3" secondAttribute="leading" constant="15" id="Iqc-eh-K6E"/>
+                                    <constraint firstItem="Etr-fG-9Fu" firstAttribute="top" secondItem="jIJ-Af-hZA" secondAttribute="bottom" constant="25" id="bbS-zF-8oo"/>
+                                    <constraint firstItem="Etr-fG-9Fu" firstAttribute="centerX" secondItem="L5W-Ks-VF3" secondAttribute="centerX" id="iu0-Af-8eE"/>
+                                    <constraint firstItem="Etr-fG-9Fu" firstAttribute="top" secondItem="jIJ-Af-hZA" secondAttribute="bottom" constant="25" id="lgg-Dh-hfM"/>
+                                    <constraint firstAttribute="trailing" secondItem="jIJ-Af-hZA" secondAttribute="trailing" constant="15" id="v6K-g8-6B4"/>
+                                    <constraint firstItem="jIJ-Af-hZA" firstAttribute="top" secondItem="L5W-Ks-VF3" secondAttribute="top" constant="67" id="vHS-U1-jvh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LBv-uT-b3Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L5W-Ks-VF3" firstAttribute="leading" secondItem="LBv-uT-b3Q" secondAttribute="leading" id="TwM-cg-WAf"/>
+                            <constraint firstItem="L5W-Ks-VF3" firstAttribute="top" secondItem="GhL-ti-oLk" secondAttribute="top" id="cvc-Hz-INp"/>
+                            <constraint firstItem="L5W-Ks-VF3" firstAttribute="trailing" secondItem="LBv-uT-b3Q" secondAttribute="trailing" id="s9n-tP-vyc"/>
+                            <constraint firstAttribute="bottom" secondItem="L5W-Ks-VF3" secondAttribute="bottom" id="vqm-0v-UMf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="jIJ-Af-hZA" id="s10-UJ-E7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzS-uC-FQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164.12213740458014" y="-749.29577464788736"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="ZfB-Yv-w0n">
             <objects>
@@ -659,6 +720,7 @@
         <image name="lionicon" width="524" height="514"/>
         <image name="menuGrid" width="1020" height="371"/>
         <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="tutorial1" width="578" height="1252"/>
         <image name="welcomeBox" width="1024" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

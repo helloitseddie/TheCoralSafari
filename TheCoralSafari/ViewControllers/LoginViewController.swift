@@ -50,6 +50,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(tabBarController, animated: true, completion: nil)
     }
     
+    func loadTutorial() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tutorialView = storyboard.instantiateViewController(withIdentifier: "tutorial")
+        tutorialView.modalPresentationStyle = .fullScreen
+        present(tutorialView, animated: true, completion: nil)
+    }
+    
     @IBAction func bigButton(_ sender: UIButton) {
         if !isSignup {
             guard let safeUser = username.text else { return }
@@ -82,7 +89,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     defaults.set(safeUser, forKey: "username")
                     defaults.synchronize()
                     DispatchQueue.main.async {
-                        self.loadApp()
+                        self.loadTutorial()
                     }
                 }
             }
@@ -118,7 +125,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     defaults.set(safeUser, forKey: "username")
                     defaults.synchronize()
                     DispatchQueue.main.async {
-                        self.loadApp()
+                        self.loadTutorial()
                     }
                 }
             }
